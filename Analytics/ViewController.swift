@@ -1,18 +1,26 @@
-//
-//  ViewController.swift
-//  Analytics
-//
-//  Created by Eric Chamberlain on 6/14/18.
-//  Copyright © 2018 Eric Chamberlain. All rights reserved.
-//
+/**
+ @copyright 2018 Upstart Illustration, LLC
+ */
 
 import UIKit
 
+private enum Constant {
+    static let pageName = "ShoppingPage"
+}
+
 class ViewController: UIViewController {
 
+    private var tech: AnalyticsPublisher<TechMetricAnalyticsEvent>!
+    private var bm: AnalyticsPublisher<ShoppingBagAnalyticsEvent>!
+    
+    func inject(techMetrics: AnalyticsPublisher<TechMetricAnalyticsEvent>, businessMetrics: AnalyticsPublisher<ShoppingBagAnalyticsEvent>) {
+        self.tech = techMetrics
+        self.bm = businessMetrics
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tech.send(.pageLoaded(name: Constant.pageName))
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +28,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func tappedCheckout(_ sender: Any) {
+        bm.send(.tappedCheckout)
+    }
+    
+    @IBAction func tappedDeleteItem(_ sender: Any) {
+        bm.send(.deletedItemFromBag(1))
+    }
 }
-

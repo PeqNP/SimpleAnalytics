@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,43 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoV-XU-S3j">
+                                <rect key="frame" x="154" y="617" width="66" height="30"/>
+                                <state key="normal" title="Checkout"/>
+                                <connections>
+                                    <action selector="tappedCheckout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWC-0f-QVX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9d-NU-YeS">
+                                <rect key="frame" x="14" y="30" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="75P-De-4ky"/>
+                                    <constraint firstAttribute="height" constant="200" id="JKt-RD-nv1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-sl-qQr">
+                                <rect key="frame" x="234" y="115" width="79" height="30"/>
+                                <state key="normal" title="Delete Item"/>
+                                <connections>
+                                    <action selector="tappedDeleteItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJR-Sa-Jy5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q9d-NU-YeS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5rF-Nl-lcS"/>
+                            <constraint firstItem="BoV-XU-S3j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="AoL-rM-yBS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BoV-XU-S3j" secondAttribute="bottom" constant="20" id="JlI-8T-SKs"/>
+                            <constraint firstItem="dOc-sl-qQr" firstAttribute="leading" secondItem="q9d-NU-YeS" secondAttribute="trailing" constant="20" id="PQM-bj-zwK"/>
+                            <constraint firstItem="dOc-sl-qQr" firstAttribute="centerY" secondItem="q9d-NU-YeS" secondAttribute="centerY" id="dYG-MB-lni"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BoV-XU-S3j" secondAttribute="trailing" constant="155" id="dxe-pJ-hoQ"/>
+                            <constraint firstItem="q9d-NU-YeS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="p2x-I4-F8z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'Analytics' do
     pod 'Swinject'
+    pod 'SwinjectStoryboard'
 end
 
 target 'AnalyticsTests' do

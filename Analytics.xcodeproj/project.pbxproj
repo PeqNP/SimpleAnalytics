@@ -13,6 +13,13 @@
 		07005D2E20D2D09500750365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07005D2D20D2D09500750365 /* Assets.xcassets */; };
 		07005D3120D2D09500750365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07005D2F20D2D09500750365 /* LaunchScreen.storyboard */; };
 		07005D3C20D2D09500750365 /* AnalyticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07005D3B20D2D09500750365 /* AnalyticsTests.swift */; };
+		070932C420D2D32F00C90630 /* AnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070932C320D2D32F00C90630 /* AnalyticsProvider.swift */; };
+		070932C620D2D74300C90630 /* FirebaseAnalyticsListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070932C520D2D74300C90630 /* FirebaseAnalyticsListener.swift */; };
+		070932C920D2D7BA00C90630 /* ShoppingBagAnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070932C820D2D7BA00C90630 /* ShoppingBagAnalyticsEvent.swift */; };
+		070932CC20D2D81200C90630 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070932CB20D2D81200C90630 /* Types.swift */; };
+		070932CE20D2DD1200C90630 /* NewRelicAnalyticsListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070932CD20D2DD1200C90630 /* NewRelicAnalyticsListener.swift */; };
+		070932D020D2DF1300C90630 /* TechMetricAnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070932CF20D2DF1300C90630 /* TechMetricAnalyticsEvent.swift */; };
+		070932D320D2E25F00C90630 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070932D220D2E25F00C90630 /* Assembly.swift */; };
 		138B2E703C919B71D568A294 /* Pods_Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4697BFF06C4A3003DEF78B /* Pods_Analytics.framework */; };
 		8E663825715CFC36CFCFBA6C /* Pods_AnalyticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1176DEB1D8F8B398E06CF891 /* Pods_AnalyticsTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +45,13 @@
 		07005D3720D2D09500750365 /* AnalyticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnalyticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07005D3B20D2D09500750365 /* AnalyticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsTests.swift; sourceTree = "<group>"; };
 		07005D3D20D2D09500750365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		070932C320D2D32F00C90630 /* AnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsProvider.swift; sourceTree = "<group>"; };
+		070932C520D2D74300C90630 /* FirebaseAnalyticsListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsListener.swift; sourceTree = "<group>"; };
+		070932C820D2D7BA00C90630 /* ShoppingBagAnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagAnalyticsEvent.swift; sourceTree = "<group>"; };
+		070932CB20D2D81200C90630 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		070932CD20D2DD1200C90630 /* NewRelicAnalyticsListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRelicAnalyticsListener.swift; sourceTree = "<group>"; };
+		070932CF20D2DF1300C90630 /* TechMetricAnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechMetricAnalyticsEvent.swift; sourceTree = "<group>"; };
+		070932D220D2E25F00C90630 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		1176DEB1D8F8B398E06CF891 /* Pods_AnalyticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFBFFD8A7770D2B5F414723 /* Pods-AnalyticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C03225EA766A8120F0613E0 /* Pods-AnalyticsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +103,8 @@
 		07005D2520D2D08E00750365 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				070932D120D2E0E500C90630 /* Application */,
+				07005D4620D2D26200750365 /* Module */,
 				07005D2620D2D08E00750365 /* AppDelegate.swift */,
 				07005D2820D2D08E00750365 /* ViewController.swift */,
 				07005D2A20D2D08E00750365 /* Main.storyboard */,
@@ -106,6 +122,51 @@
 				07005D3D20D2D09500750365 /* Info.plist */,
 			);
 			path = AnalyticsTests;
+			sourceTree = "<group>";
+		};
+		07005D4620D2D26200750365 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				070932CA20D2D80900C90630 /* Domain */,
+				070932C720D2D7A600C90630 /* ShoppingBag */,
+				070932C220D2D28500C90630 /* Metrics */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		070932C220D2D28500C90630 /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				070932C320D2D32F00C90630 /* AnalyticsProvider.swift */,
+				070932CF20D2DF1300C90630 /* TechMetricAnalyticsEvent.swift */,
+			);
+			path = Metrics;
+			sourceTree = "<group>";
+		};
+		070932C720D2D7A600C90630 /* ShoppingBag */ = {
+			isa = PBXGroup;
+			children = (
+				070932C820D2D7BA00C90630 /* ShoppingBagAnalyticsEvent.swift */,
+			);
+			path = ShoppingBag;
+			sourceTree = "<group>";
+		};
+		070932CA20D2D80900C90630 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				070932CB20D2D81200C90630 /* Types.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		070932D120D2E0E500C90630 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				070932C520D2D74300C90630 /* FirebaseAnalyticsListener.swift */,
+				070932CD20D2DD1200C90630 /* NewRelicAnalyticsListener.swift */,
+				070932D220D2E25F00C90630 /* Assembly.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		24684149953C2C1A422055ED /* Pods */ = {
@@ -283,10 +344,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Analytics/Pods-Analytics-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -319,7 +382,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07005D2920D2D08E00750365 /* ViewController.swift in Sources */,
+				070932C620D2D74300C90630 /* FirebaseAnalyticsListener.swift in Sources */,
 				07005D2720D2D08E00750365 /* AppDelegate.swift in Sources */,
+				070932D020D2DF1300C90630 /* TechMetricAnalyticsEvent.swift in Sources */,
+				070932D320D2E25F00C90630 /* Assembly.swift in Sources */,
+				070932CC20D2D81200C90630 /* Types.swift in Sources */,
+				070932CE20D2DD1200C90630 /* NewRelicAnalyticsListener.swift in Sources */,
+				070932C920D2D7BA00C90630 /* ShoppingBagAnalyticsEvent.swift in Sources */,
+				070932C420D2D32F00C90630 /* AnalyticsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
