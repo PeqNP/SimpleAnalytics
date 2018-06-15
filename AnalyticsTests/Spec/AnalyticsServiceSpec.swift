@@ -6,21 +6,9 @@ import Spry_Nimble
 
 @testable import Analytics
 
-enum FakeEvent: AnalyticsEvent, Equatable, SpryEquatable {
+enum FakeEvent: AnalyticsEvent, AutoEquatable, SpryEquatable {
     case foo
     case bar(name: String)
-    
-    public static func ==(lhs: FakeEvent, rhs: FakeEvent) -> Bool {
-        switch (lhs, rhs) {
-        case (.foo, .foo):
-            return true
-        case (.bar(let a1), .bar(let b1)):
-            return a1 == b1
-            
-        case (.foo, _), (.bar, _):
-            return false
-        }
-    }
 }
 
 class AnalyticsServiceSpec: QuickSpec {
