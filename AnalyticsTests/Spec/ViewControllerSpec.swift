@@ -1,3 +1,7 @@
+/**
+ This tests shows how you could test events sent to the analytics service. This is just _one_ example. The test could use Spry.
+ */
+
 import Quick
 import Nimble
 import KIF_Quick
