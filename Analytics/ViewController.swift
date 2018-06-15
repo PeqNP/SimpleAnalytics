@@ -10,6 +10,18 @@ private enum Constant {
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var checkoutButton: UIButton! {
+        didSet {
+            checkoutButton.accessibilityIdentifier = "ViewController.CheckoutButton"
+        }
+    }
+    
+    @IBOutlet weak var deleteItemButton: UIButton! {
+        didSet {
+            deleteItemButton.accessibilityIdentifier = "ViewController.DeleteItemButton"
+        }
+    }
+    
     private var tech: AnalyticsPublisher<TechMetricAnalyticsEvent>!
     private var bm: AnalyticsPublisher<ShoppingBagAnalyticsEvent>!
     

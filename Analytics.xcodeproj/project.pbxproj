@@ -24,6 +24,9 @@
 		075AC6F020D2F30F000E62A7 /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AC6EF20D2F30F000E62A7 /* ViewControllerSpec.swift */; };
 		075AC6F220D2F48B000E62A7 /* FakeAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AC6F120D2F48B000E62A7 /* FakeAnalyticsService.swift */; };
 		075AC6F420D2F4BA000E62A7 /* FakeAnalyticsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AC6F320D2F4BA000E62A7 /* FakeAnalyticsPublisher.swift */; };
+		075AC6F720D3448B000E62A7 /* TechMetricAnalyticsEvent+TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AC6F620D3448B000E62A7 /* TechMetricAnalyticsEvent+TestHelper.swift */; };
+		075AC6FA20D34535000E62A7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AC6F920D34535000E62A7 /* Helpers.swift */; };
+		075AC6FC20D347D0000E62A7 /* ShoppingBagAnalyticsEvent+TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AC6FB20D347D0000E62A7 /* ShoppingBagAnalyticsEvent+TestHelper.swift */; };
 		138B2E703C919B71D568A294 /* Pods_Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4697BFF06C4A3003DEF78B /* Pods_Analytics.framework */; };
 		8E663825715CFC36CFCFBA6C /* Pods_AnalyticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1176DEB1D8F8B398E06CF891 /* Pods_AnalyticsTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +63,9 @@
 		075AC6EF20D2F30F000E62A7 /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		075AC6F120D2F48B000E62A7 /* FakeAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAnalyticsService.swift; sourceTree = "<group>"; };
 		075AC6F320D2F4BA000E62A7 /* FakeAnalyticsPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAnalyticsPublisher.swift; sourceTree = "<group>"; };
+		075AC6F620D3448B000E62A7 /* TechMetricAnalyticsEvent+TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TechMetricAnalyticsEvent+TestHelper.swift"; sourceTree = "<group>"; };
+		075AC6F920D34535000E62A7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		075AC6FB20D347D0000E62A7 /* ShoppingBagAnalyticsEvent+TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingBagAnalyticsEvent+TestHelper.swift"; sourceTree = "<group>"; };
 		1176DEB1D8F8B398E06CF891 /* Pods_AnalyticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EFBFFD8A7770D2B5F414723 /* Pods-AnalyticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C03225EA766A8120F0613E0 /* Pods-AnalyticsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 		07005D3A20D2D09500750365 /* AnalyticsTests */ = {
 			isa = PBXGroup;
 			children = (
+				075AC6F520D3446F000E62A7 /* TestHelper */,
 				075AC6EC20D2F2CA000E62A7 /* Fake */,
 				075AC6E920D2EF8B000E62A7 /* Spec */,
 				07005D3D20D2D09500750365 /* Info.plist */,
@@ -195,6 +202,16 @@
 				075AC6F120D2F48B000E62A7 /* FakeAnalyticsService.swift */,
 			);
 			path = Fake;
+			sourceTree = "<group>";
+		};
+		075AC6F520D3446F000E62A7 /* TestHelper */ = {
+			isa = PBXGroup;
+			children = (
+				075AC6F920D34535000E62A7 /* Helpers.swift */,
+				075AC6F620D3448B000E62A7 /* TechMetricAnalyticsEvent+TestHelper.swift */,
+				075AC6FB20D347D0000E62A7 /* ShoppingBagAnalyticsEvent+TestHelper.swift */,
+			);
+			path = TestHelper;
 			sourceTree = "<group>";
 		};
 		24684149953C2C1A422055ED /* Pods */ = {
@@ -327,6 +344,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AutoEquatable/AutoEquatable.framework",
 				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF-Quick/KIF_Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/Spry/Spry.framework",
@@ -336,6 +354,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoEquatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF_Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spry.framework",
@@ -426,10 +445,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				075AC6F020D2F30F000E62A7 /* ViewControllerSpec.swift in Sources */,
+				075AC6FA20D34535000E62A7 /* Helpers.swift in Sources */,
 				075AC6F220D2F48B000E62A7 /* FakeAnalyticsService.swift in Sources */,
 				075AC6EB20D2EFA3000E62A7 /* AnalyticsServiceSpec.swift in Sources */,
+				075AC6FC20D347D0000E62A7 /* ShoppingBagAnalyticsEvent+TestHelper.swift in Sources */,
 				075AC6EE20D2F2D7000E62A7 /* FakeAnalyticsListener.swift in Sources */,
 				075AC6F420D2F4BA000E62A7 /* FakeAnalyticsPublisher.swift in Sources */,
+				075AC6F720D3448B000E62A7 /* TechMetricAnalyticsEvent+TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

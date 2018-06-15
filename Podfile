@@ -10,7 +10,9 @@ end
 target 'AnalyticsTests' do
     pod 'Quick', '~> 1.2'
     pod 'Nimble', '~> 7.0'
-    pod 'KIF', '~> 3.7'
+    pod 'KIF'
+    pod 'KIF/IdentifierTests'
+    pod 'KIF-Quick'
     pod 'Spry'
     pod 'Spry+Nimble'
     pod 'AutoEquatable'
