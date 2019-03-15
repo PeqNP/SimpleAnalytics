@@ -48,6 +48,10 @@ class NewRelicAnalyticsListener: AnalyticsListener {
             newRelic.emit(event)
         }
     }
+    
+    func transaction(_ event: AnalyticsEvent, _ context: AnalyticsTransaction) {
+        // Not implemented
+    }
 }
 
 // MARK: - NewRelic event transformers (could be in another file)

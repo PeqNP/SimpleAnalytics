@@ -41,6 +41,10 @@ class FirebaseAnalyticsListener: AnalyticsListener {
             firebase.emit(payload)
         }
     }
+    
+    func transaction(_ event: AnalyticsEvent, _ context: AnalyticsTransaction) {
+        // Not implemented
+    }
 }
 
 // MARK: - Firebase event transformers (could be in another file)
