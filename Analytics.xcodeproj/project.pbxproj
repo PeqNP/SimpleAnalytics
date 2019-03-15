@@ -125,7 +125,7 @@
 		07005D2520D2D08E00750365 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				07E3B410223BF25700959808 /* AnalyticsService */,
+				07E3B410223BF25700959808 /* SimpleAnalytics */,
 				070932D120D2E0E500C90630 /* Application */,
 				07005D4620D2D26200750365 /* Module */,
 				07005D2620D2D08E00750365 /* AppDelegate.swift */,
@@ -222,7 +222,7 @@
 			path = TestHelper;
 			sourceTree = "<group>";
 		};
-		07E3B410223BF25700959808 /* AnalyticsService */ = {
+		07E3B410223BF25700959808 /* SimpleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
 				07E3B411223BF27200959808 /* AnalyticsEvent.swift */,
@@ -231,7 +231,7 @@
 				070932C320D2D32F00C90630 /* AnalyticsService.swift */,
 				07E3B417223BF2AF00959808 /* AnalyticsTransaction.swift */,
 			);
-			path = AnalyticsService;
+			path = SimpleAnalytics;
 			sourceTree = "<group>";
 		};
 		24684149953C2C1A422055ED /* Pods */ = {
