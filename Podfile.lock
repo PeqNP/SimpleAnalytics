@@ -1,0 +1,58 @@
+PODS:
+  - AutoEquatable (2.1)
+  - KIF (3.7.3):
+    - KIF/Core (= 3.7.3)
+  - KIF-Quick (1.1.0):
+    - KIF (~> 3.0)
+    - Quick (~> 1.0)
+  - KIF/Core (3.7.3)
+  - KIF/IdentifierTests (3.7.3):
+    - KIF/Core
+  - Nimble (7.1.1)
+  - Quick (1.3.0)
+  - Spry (3.2.3)
+  - "Spry+Nimble (3.2.3)":
+    - Nimble (> 7.0.0)
+    - Spry (= 3.2.3)
+  - Swinject (2.4.0)
+  - SwinjectStoryboard (2.0.1):
+    - Swinject (~> 2.4)
+
+DEPENDENCIES:
+  - AutoEquatable
+  - KIF
+  - KIF-Quick
+  - KIF/IdentifierTests
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2)
+  - Spry
+  - "Spry+Nimble"
+  - Swinject
+  - SwinjectStoryboard
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AutoEquatable
+    - KIF
+    - KIF-Quick
+    - Nimble
+    - Quick
+    - Spry
+    - "Spry+Nimble"
+    - Swinject
+    - SwinjectStoryboard
+
+SPEC CHECKSUMS:
+  AutoEquatable: d48cca2595b98f8047f43444fb0f6ed56cc2ae72
+  KIF: 4c23b5d24dba24d3cb6dbb9c7d325b31e526ba4a
+  KIF-Quick: da968bbfad615fd96c0d5eb4d8fd484ecdc26814
+  Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
+  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
+  Spry: 216a7f6566e6c7a0392f3f4b4e804e71d58e1835
+  "Spry+Nimble": 65b76e7d2dbe2d9166109ff44d8eea44a0bea94e
+  Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
+  SwinjectStoryboard: ad2529218a1504cc888040ee56c13d7cb1cc7998
+
+PODFILE CHECKSUM: e7571c48620a915a5614e7f2a7d1823b829476dc
+
+COCOAPODS: 1.5.3
