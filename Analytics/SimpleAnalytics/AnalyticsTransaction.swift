@@ -1,7 +1,7 @@
 /**
  Provides contextual information for a transaction.
- 
- @copyright 2019 Upstart Illustration, LLC. All rights reserved.
+
+ @copyright 2022 Bithead, LLC. All rights reserved.
  */
 
 import Foundation
@@ -12,7 +12,7 @@ enum AnalyticsTransaction {
         case cancelled
         case stopped
     }
-    
+
     case start(AnalyticsStartedTransaction)
     case finish(AnalyticsFinishedTransaction)
 }
@@ -20,7 +20,7 @@ enum AnalyticsTransaction {
 struct AnalyticsStartedTransaction {
     let status: AnalyticsTransaction.Status = .started
     let startTime: Double // UNIX time in seconds
-    
+
     init(startTime: Double) {
         self.startTime = startTime
     }

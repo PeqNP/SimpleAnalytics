@@ -4,10 +4,10 @@ This project provides a proof of concept of how to emit module-specific analytic
 
 ## Example
 
-```
+```swift
 // Initialize analytics vendors and the `AnalyticsService` which will provide the glue between publishers and the respective analytics vendors.
 let firebaseListener = FirebaseAnalyticsListener(firebase: Firebase())
-let newRelicListener = NewRelicAnalyticsListener(newRelic: NewRelic()
+let newRelicListener = NewRelicAnalyticsListener(newRelic: NewRelic())
 let analyticsService = AnalyticsService(listeners: [firebaseListener, newRelicListener])
 
 // An event that will be emitted from the `ShoppingBag` module
